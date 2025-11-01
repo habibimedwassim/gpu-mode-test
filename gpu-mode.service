@@ -1,0 +1,15 @@
+[Unit]
+Description=GPU Mode Daemon
+After=multi-user.target
+Wants=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/libexec/gpu-mode-daemon
+Restart=always
+User=root
+RuntimeDirectory=gpu-mode
+RuntimeDirectoryMode=0777
+
+[Install]
+WantedBy=multi-user.target
