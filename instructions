@@ -6,4 +6,6 @@ sudo cp gpu-mode.c /usr/local/src/gpu-mode/
 sudo gcc -O2 -Wall -o /usr/local/libexec/gpu-mode-daemon /usr/local/src/gpu-mode/gpu-mode-daemon.c
 sudo gcc -O2 -Wall -o /usr/local/bin/gpu-mode /usr/local/src/gpu-mode/gpu-mode.c
 
+sudo cp gpu-mode.service /etc/systemd/system/
+
 sudo systemctl enable --now gpu-mode.service
